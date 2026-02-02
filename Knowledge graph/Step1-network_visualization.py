@@ -59,7 +59,7 @@ def build_network(PAEs_df, TPR_df, name_col=None):
 
 
 def visualize_network(G, save_path='PAEs_network_visualization.png'):
-    tpr_df = pd.read_csv('TPR_modified_number.csv')
+    tpr_df = pd.read_csv('TPR_number.csv')
     name_mapping = {(row['Up'], row['Down']): row['Name'] for _, row in tpr_df.iterrows()}
     number_mapping = {(row['Up'], row['Down']): row['Number'] for _, row in tpr_df.iterrows()}
 
