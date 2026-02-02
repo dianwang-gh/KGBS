@@ -1,3 +1,5 @@
+import os
+import pickle
 import pandas as pd
 import networkx as nx
 import matplotlib.pyplot as plt
@@ -14,6 +16,65 @@ import itertools
 import matplotlib.patches as mpatches
 
 global_status = {'phase': 'initializing', 'start_time': time.time()}
+
+# ------------------------ Model Serialization (H5) ------------------------
+def save_model_h5(model, filepath='bn_model.h5'):
+	"""Serialize Bayesian network structure + CPDs to H5 for reuse."""
+	try:
+		import h5py
+	except Exception as e:
+		raise ImportError("h5py is required to save H5 models. Install it first.") from e
+
+	str_dtype = h5py.string_dtype(encoding='utf-8')
+	with h5py.File(filepath, 'w') as f:
+		edges = list(model.edges())
+		edges_arr = np.array(edges, dtype=str_dtype) if edges else np.empty((0, 2), dtype=str_dtype)
+		f.create_dataset('edges', data=edges_arr)
+
+		nodes = list(model.nodes())
+		nodes_arr = np.array(nodes, dtype=str_dtype) if nodes else np.empty((0,), dtype=str_dtype)
+		f.create_dataset('nodes', data=nodes_arr)
+
+		cpds_group = f.create_group('cpds')
+		for cpd in model.cpds:
+			cpd_group = cpds_group.create_group(cpd.variable)
+			cpd_group.create_dataset('values', data=np.array(cpd.get_values(), dtype=float))
+			cpd_group.create_dataset('variable_card', data=np.array([cpd.variable_card], dtype=int))
+			evidence = list(cpd.variables[1:])
+			evidence_arr = np.array(evidence, dtype=str_dtype) if evidence else np.empty((0,), dtype=str_dtype)
+			cpd_group.create_dataset('evidence', data=evidence_arr)
+			cpd_group.create_dataset('evidence_card', data=np.array(cpd.cardinality[1:], dtype=int))
+
+	print(f"Saved Bayesian Network model to '{filepath}'.")
+
+
+def load_model_h5(filepath='bn_model.h5'):
+	"""Load Bayesian network structure + CPDs from H5."""
+	try:
+		import h5py
+	except Exception as e:
+		raise ImportError("h5py is required to load H5 models. Install it first.") from e
+
+	with h5py.File(filepath, 'r') as f:
+		edges = [tuple(edge.astype(str)) for edge in f['edges'][()]]
+		model = DiscreteBayesianNetwork(edges)
+
+		for var in f['cpds'].keys():
+			cpd_group = f['cpds'][var]
+			values = cpd_group['values'][()]
+			var_card = int(cpd_group['variable_card'][()][0])
+			evidence = [e.decode('utf-8') if isinstance(e, bytes) else str(e) for e in cpd_group['evidence'][()]]
+			evidence_card = [int(x) for x in cpd_group['evidence_card'][()]]
+			cpd = TabularCPD(
+				variable=var,
+				variable_card=var_card,
+				values=values,
+				evidence=evidence if evidence else None,
+				evidence_card=evidence_card if evidence_card else None
+			)
+			model.add_cpds(cpd)
+
+	return model
 
 # ------------------------ Inference Function ------------------------
 def infer_node(model, node):
@@ -34,13 +95,27 @@ def countdown_monitor():
         time.sleep(30)
 
 # ------------------------ Step 1: Load Node and Edge Information ------------------------
-def load_data(nodes_path='nodes_info.csv', edges_path='edges_info.csv'):
-    global_status['phase'] = 'Loading Data'
-    start = time.time()
-    nodes_df = pd.read_csv(nodes_path)
-    edges_df = pd.read_csv(edges_path)
-    print(f"Loaded {len(nodes_df)} nodes and {len(edges_df)} edges. Time: {time.time() - start:.2f}s")
-    return nodes_df, edges_df
+def load_data(nodes_path='nodes_info.csv', edges_path='edges_info.csv', graph_path='PAEs_network.gpickle'):
+	global_status['phase'] = 'Loading Data'
+	start = time.time()
+	nodes_df = pd.read_csv(nodes_path)
+	edges_df = pd.read_csv(edges_path)
+	valid_types = {'PAEs', 'mPAEs'}
+	if 'Type' not in nodes_df.columns or not nodes_df['Type'].isin(valid_types).all():
+		if os.path.exists(graph_path):
+			with open(graph_path, 'rb') as f:
+				G = pickle.load(f)
+			type_map = {n: data.get('pae_type') or data.get('type') or data.get('Type') for n, data in G.nodes(data=True)}
+			nodes_df['Type'] = nodes_df['Node'].map(type_map)
+		else:
+			raise ValueError("Nodes DataFrame must contain 'Type' column")
+		missing_types = nodes_df['Type'].isna().sum()
+		if missing_types:
+			raise ValueError(
+				f"Missing node type for {missing_types} nodes. Regenerate nodes_info.csv with Step2."
+			)
+	print(f"Loaded {len(nodes_df)} nodes and {len(edges_df)} edges. Time: {time.time() - start:.2f}s")
+	return nodes_df, edges_df
 
 # ------------------------ Step 2: Build BayesianNetwork Structure ------------------------
 def build_bayesian_model(edges_df):
@@ -67,7 +142,7 @@ def build_single_cpd(node, parents, edge_prob_map, threshold=0.01):
         print(f"Simplified {node}: Reduced parents from {len(parents)} to {len(selected_parents)}")
 
         # Rebuild CPD using filtered parent nodes
-        inhibitor_probs = [edge_prob_map.get((parent, node), 0.5) for parent in selected_parents]
+        link_probs = [edge_prob_map.get((parent, node), 0.5) for parent in selected_parents]
 
         # Generate all parent node state combinations
         parent_states = list(itertools.product([0, 1], repeat=len(selected_parents)))
@@ -78,7 +153,7 @@ def build_single_cpd(node, parents, edge_prob_map, threshold=0.01):
             prob = 1.0
             for i, s in enumerate(state):
                 if s == 1:
-                    prob *= (1 - inhibitor_probs[i])
+                    prob *= (1 - link_probs[i])
             active_prob = 1 - prob
             values.append([1 - active_prob, active_prob])
 
@@ -243,6 +318,15 @@ def visualize_inferred_network(nodes_df, edges_df, save_path='inferred_network.p
 
 	PAEs_nodes = [node for node in G.nodes() if node_type_map.get(node) == 'PAEs']
 	mPAEs_nodes = [node for node in G.nodes() if node_type_map.get(node) == 'mPAEs']
+	# Define classification boundaries and corresponding colors
+	bins = [0, 0.01, 0.1, 1, 20, 100]
+	colors = [
+		'#F6ECD5',  # <0.01
+		'#F9CA71',  # 0.01-0.1
+		'#E87630',  # 0.1-1
+		'#B3344E',  # 1-20
+		'#7E1A6A'  # 20-100
+	]
 
 	if PAEs_nodes:
 		PAEs_sizes = [node_size_map[node] for node in PAEs_nodes]
@@ -262,16 +346,6 @@ def visualize_inferred_network(nodes_df, edges_df, save_path='inferred_network.p
 		mPAEs_sizes = [node_size_map[node] for node in mPAEs_nodes]
 		mPAEs_normalized = [bayes_normalized.get(node, 50) for node in mPAEs_nodes]
 		mPAEs_pos = {node: pos[node] for node in mPAEs_nodes}
-
-		# Define classification boundaries and corresponding colors
-		bins = [0, 0.01, 0.1, 1, 20, 100]
-		colors = [
-			'#F6ECD5',  # <0.01
-			'#F9CA71',  # 0.01-0.1
-			'#E87630',  # 0.1-1
-			'#B3344E',  # 1-20
-			'#7E1A6A'  # 20-100
-		]
 
 		# Assign color for each node
 		mPAEs_colors = []
@@ -358,6 +432,8 @@ def main():
 
     if not model.check_model():
         raise ValueError("Bayesian Network structure invalid!")
+
+    save_model_h5(model, 'bn_model.h5')
 
     updated_nodes_df = infer_bayes_probabilities_parallel(model, nodes_df)
     # Only normalize mPAEs nodes (0-100)
