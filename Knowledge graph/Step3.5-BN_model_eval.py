@@ -32,8 +32,8 @@ EVAL_SETTINGS = {
     },
     'robustness': {
         'drop_frac': 0.1,
-        'base_k': 10,
-        'alt_ks': (8, 12)
+        'base_k': 20,
+        'alt_ks': (19, 26)
     }
 }
 
@@ -606,7 +606,7 @@ def kendall_tau(values_a, values_b, sample_size=300, seed=42):
     return (concordant - discordant) / denom if denom > 0 else np.nan
 
 
-def compute_topk_sensitivity(edges_df, edge_prob_map, base_k=20, alt_ks=(10, 30), max_parents_cap=None, seed=42):
+def compute_topk_sensitivity(edges_df, edge_prob_map, base_k=20, alt_ks=(19, 26), max_parents_cap=None, seed=42):
     base_model = build_model_from_edges(edges_df, edge_prob_map, max_parents=base_k, max_parents_cap=max_parents_cap)
     base_probs = compute_marginals(base_model)
     nodes = sorted(base_probs.keys())
@@ -648,14 +648,14 @@ def summarize_results(pre_df, synth_brier, synth_ece, pr_auc, structure_df, sens
         diff_median = float(valid_diffs.median())
         diff_p95 = float(valid_diffs.quantile(0.95))
 
-    tau10 = np.nan
-    tau30 = np.nan
+    tau19 = np.nan
+    tau26 = np.nan
     if not sensitivity_df.empty:
         for _, row in sensitivity_df.iterrows():
-            if int(row['MaxParents']) == 10:
-                tau10 = float(row['KendallTau'])
-            if int(row['MaxParents']) == 30:
-                tau30 = float(row['KendallTau'])
+            if int(row['MaxParents']) == 19:
+                tau19 = float(row['KendallTau'])
+            if int(row['MaxParents']) == 26:
+                tau26 = float(row['KendallTau'])
 
     lines = [
         "BN model summary",
@@ -668,8 +668,8 @@ def summarize_results(pre_df, synth_brier, synth_ece, pr_auc, structure_df, sens
         f"- Holdout_PR_AUC_delta_influence: {pr_auc:.4f}" if not np.isnan(pr_auc) else "- Holdout_PR_AUC_delta_influence: nan",
         f"- Robustness_structure_absdiff_median: {diff_median:.4f}" if not np.isnan(diff_median) else "- Robustness_structure_absdiff_median: nan",
         f"- Robustness_structure_absdiff_p95: {diff_p95:.4f}" if not np.isnan(diff_p95) else "- Robustness_structure_absdiff_p95: nan",
-        f"- Robustness_topk_sensitivity_tau_10: {tau10:.4f}" if not np.isnan(tau10) else "- Robustness_topk_sensitivity_tau_10: nan",
-        f"- Robustness_topk_sensitivity_tau_30: {tau30:.4f}" if not np.isnan(tau30) else "- Robustness_topk_sensitivity_tau_30: nan"
+        f"- Robustness_topk_sensitivity_tau_19: {tau19:.4f}" if not np.isnan(tau19) else "- Robustness_topk_sensitivity_tau_19: nan",
+        f"- Robustness_topk_sensitivity_tau_26: {tau26:.4f}" if not np.isnan(tau26) else "- Robustness_topk_sensitivity_tau_26: nan"
     ]
     with open(out_path, 'w', encoding='utf-8') as f:
         f.write("\\n".join(lines) + "\\n")
