@@ -276,7 +276,7 @@ def _infer_wrapper(model_data, node):
 
 
 # ------------------------ Step 6: Visualization Function ------------------------
-def visualize_inferred_network(nodes_df, edges_df, save_path='inferred_network.png'):
+def visualize_inferred_network(nodes_df, edges_df, save_path='inferred_network_3.png'):
 	global_status['phase'] = 'Visualization'
 	start = time.time()
 	G = nx.DiGraph()
@@ -319,13 +319,13 @@ def visualize_inferred_network(nodes_df, edges_df, save_path='inferred_network.p
 	PAEs_nodes = [node for node in G.nodes() if node_type_map.get(node) == 'PAEs']
 	mPAEs_nodes = [node for node in G.nodes() if node_type_map.get(node) == 'mPAEs']
 	# Define classification boundaries and corresponding colors
-	bins = [0, 0.01, 0.1, 1, 20, 100]
+	bins = [0, 0.01, 4, 10, 16, 100]
 	colors = [
-		'#F6ECD5',  # <0.01
-		'#F9CA71',  # 0.01-0.1
-		'#E87630',  # 0.1-1
-		'#B3344E',  # 1-20
-		'#7E1A6A'  # 20-100
+		'#F6ECD5',  
+		'#F9CA71',  
+		'#E87630',  
+		'#B3344E', 
+		'#7E1A6A'  
 	]
 
 	if PAEs_nodes:
@@ -379,10 +379,10 @@ def visualize_inferred_network(nodes_df, edges_df, save_path='inferred_network.p
 	legend_patches = [
 		mpatches.Patch(color='#d6d6d6', label='PAEs'),
 		mpatches.Patch(color=colors[0], label='mPAEs: <0.01'),
-		mpatches.Patch(color=colors[1], label='mPAEs: 0.01-0.1'),
-		mpatches.Patch(color=colors[2], label='mPAEs: 0.1-1'),
-		mpatches.Patch(color=colors[3], label='mPAEs: 1-20'),
-		mpatches.Patch(color=colors[4], label='mPAEs: 20-100')
+		mpatches.Patch(color=colors[1], label='mPAEs: 0.01-4'),
+		mpatches.Patch(color=colors[2], label='mPAEs: 4-10'),
+		mpatches.Patch(color=colors[3], label='mPAEs: 10-16'),
+		mpatches.Patch(color=colors[4], label='mPAEs: 16-100')
 	]
 
 	legend = ax.legend(
