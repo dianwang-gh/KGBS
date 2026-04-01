@@ -61,17 +61,17 @@ def build_network(PAEs_df, TPR_df, name_col=None):
 def visualize_network(G, save_path='PAEs_network_visualization.png'):
     tpr_df = pd.read_csv('TPR_number.csv')
     name_mapping = {(row['Up'], row['Down']): row['Name'] for _, row in tpr_df.iterrows()}
-    number_mapping = {(row['Up'], row['Down']): row['Number'] for _, row in tpr_df.iterrows()}
 
-    # Dynamically calculate edge width
-    max_number = tpr_df['Number'].max()
-    min_number = tpr_df['Number'].min()
+    prob_mapping = {(row['Up'], row['Down']): row['CooccurrenceProbability'] for _, row in tpr_df.iterrows()}
+
+    prob_values = list(prob_mapping.values())
+    max_prob = max(prob_values)
+    min_prob = min(prob_values)
     edge_widths = [
-        (number_mapping.get((u, v), min_number) - min_number) / (max_number - min_number) * 9 + 1
+        (prob_mapping.get((u, v), min_prob) - min_prob) / (max_prob - min_prob) * 9 + 1
         for u, v in G.edges()
-    ] if max_number != min_number else [5] * len(G.edges())
+    ] if max_prob != min_prob else [5] * len(G.edges())
 
-    # Define edge color mapping
     relation_colors = {
         'sequential': 'gray',
         'v_shape': 'green',
@@ -86,13 +86,11 @@ def visualize_network(G, save_path='PAEs_network_visualization.png'):
     pos = nx.spring_layout(G, k=0.01, iterations=50)
     fig, ax = plt.subplots(figsize=(20, 20))
 
-    # Draw nodes
     PAEs_nodes = [node for node, attr in G.nodes(data=True) if attr.get('type') == 'PAEs']
     mPAEs_nodes = [node for node, attr in G.nodes(data=True) if attr.get('type') == 'mPAEs']
     nx.draw_networkx_nodes(G, pos, nodelist=PAEs_nodes, node_size=300, node_color='#5CC9F5', alpha=0.8, ax=ax)
     nx.draw_networkx_nodes(G, pos, nodelist=mPAEs_nodes, node_size=300, node_color='#F78AE0', alpha=0.8, ax=ax)
 
-    # Draw edges (set colors according to different relation_types)
     nx.draw_networkx_edges(
         G, pos,
         edgelist=G.edges(),
@@ -107,7 +105,6 @@ def visualize_network(G, save_path='PAEs_network_visualization.png'):
 
     nx.draw_networkx_labels(G, pos, font_size=6, font_color='black', ax=ax)
 
-    # Legend
     blue_line = plt.Line2D([], [], marker='o', color='w', markerfacecolor='#5CC9F5', markersize=10, label='PAEs')
     pink_line = plt.Line2D([], [], marker='o', color='w', markerfacecolor='#F78AE0', markersize=10, label='mPAEs')
     gray_line = plt.Line2D([], [], color='gray', lw=2, label='Sequential')
@@ -116,7 +113,6 @@ def visualize_network(G, save_path='PAEs_network_visualization.png'):
     plt.legend(handles=[blue_line, pink_line, gray_line, green_line, red_line], frameon=False, labelspacing=1,
                title='Legend')
 
-    # Click event
     def on_click(event):
         if event.inaxes is not None:
             edge_threshold = 0.05
@@ -132,10 +128,12 @@ def visualize_network(G, save_path='PAEs_network_visualization.png'):
 
             if clicked_edge:
                 relation = name_mapping.get(clicked_edge, 'N/A')
-                number = number_mapping.get(clicked_edge, 'N/A')
+                prob = prob_mapping.get(clicked_edge, 'N/A') 
                 relation_type = G.edges[clicked_edge].get('relation_type', 'sequential')
                 print(
-                    f"Edge ({clicked_edge[0]} → {clicked_edge[1]}) clicked! Relation: {relation}, Number: {number}, Type: {relation_type}")
+                    f"Edge ({clicked_edge[0]} → {clicked_edge[1]}) clicked! Relation: {relation}, "
+                    f"CooccurrenceProbability: {prob}, Type: {relation_type}"
+                )
                 return
 
             clicked_node = None
