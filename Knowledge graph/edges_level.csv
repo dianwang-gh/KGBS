@@ -1,0 +1,663 @@
+Up,UpScreeningResult,Down,DownScreeningResult,Name
+BDeGP,Level 2,mDeGP,Level 2,mono
+BHEP,Level 3,mHEP,Level 2,mono
+DMEP,ND,mMEP,Level 2,mono
+MEEMP,Level 4,mMP,Level 1,mono
+MEEMP,Level 4,mMOEP,Level 2,mono
+DMP,Level 1,mMP,Level 1,mono
+BEEEP,Level 4,mBEEEP,Level 2,mono
+MeVP,Level 2,mMP,Level 1,mono
+MeVP,Level 2,mVP,ND,mono
+MeEP,ND,mMP,Level 1,mono
+MeEP,ND,mEP,Level 1,mono
+BDHPP,Level 4,mBP,Level 1,mono
+BDHPP,Level 4,mHBP,Level 2,w-1-OH
+BDHPP,Level 4,m2HBP,Level 2,mOH
+BDHPP,Level 4,mCPP,Level 2,w-ab
+BDHPP,Level 4,mDHPP,ND,mono
+DEEP,ND,mEEP,Level 2,mono
+DVP,ND,mVP,ND,mono
+DEP,Level 1,mEP,Level 1,mono
+EVP,Level 4,mVP,ND,mono
+EVP,Level 4,mEP,Level 1,mono
+BMOPP,ND,mMOPP,ND,mono
+DiPrP,Level 4,miPrP,ND,mono
+EiBP,Level 4,mEP,Level 1,mono
+EiBP,Level 4,miBP,Level 1,mono
+EiBP,Level 4,m3HIBP,ND,w-OH
+EiBP,Level 4,mHIBP,Level 2,w-1-OH
+DAlP,Level 1,mAlP,Level 3,mono
+BMP,ND,mMP,Level 1,mono
+BMP,ND,mBP,Level 1,mono
+DtBP,ND,mtBP,Level 2,mono
+BEP,Level 4,mEP,Level 1,mono
+BEP,Level 4,mBP,Level 1,mono
+DsBP,ND,msBP,Level 2,mono
+DsBP,ND,msHBP,ND,mOH
+DPrP,Level 4,mPrP,Level 2,mono
+DiBP,Level 1,miBP,Level 1,mono
+DCPP,ND,mCOPP,ND,mono
+BBEEP,Level 4,mBEEP,Level 2,mono
+MeEHP,ND,mMP,Level 1,mono
+MeEHP,ND,mEHP,Level 1,mono
+MeEHP,ND,mEHHP,Level 1,w-1-OH
+MeEHP,ND,mEOHP,Level 1,w-1-oxo
+MeEHP,ND,mECPP,Level 2,w-COOH
+MeEHP,ND,mCMHP,Level 2,w-COOH-br
+MeEHP,ND,mCPP,Level 2,w-ab
+DBEP,ND,mBEP,Level 2,mono
+DPhP,ND,mPhP,Level 3,mono
+HMP,ND,mMP,Level 1,mono
+HMP,ND,mHP,ND,mono
+HMP,ND,mHHP,ND,w-1-OH
+HMP,ND,mOHP,Level 4,w-1-oxo
+HMP,ND,m5CPP,ND,w-COOH
+HMP,ND,mCPP,Level 2,w-ab
+DBP,Level 1,mBP,Level 1,mono
+CiBP,ND,mCHP,ND,mono
+CiBP,ND,miBP,Level 1,mono
+BuEBP,ND,mBEP,Level 2,mono
+BuEBP,ND,mBP,Level 1,mono
+BsBP,Level 2,mBP,Level 1,mono
+BsBP,Level 2,msBP,Level 2,mono
+BsBP,Level 2,msHBP,ND,mOH
+BiBP,Level 2,mBP,Level 1,mono
+BiBP,Level 2,miBP,Level 1,mono
+BBzP,ND,mBzP,ND,mono
+BBzP,ND,mBP,Level 1,mono
+DCHP,ND,mCHP,ND,mono
+DBzP,ND,mBzP,ND,mono
+BCHP,ND,mBP,Level 1,mono
+BCHP,ND,mCHP,ND,mono
+BEBP,Level 4,mEBP,ND,mono
+BEBP,Level 4,mHEBP,ND,w-1-OH
+BEBP,Level 4,mOEBP,ND,w-1-oxo
+BEBP,Level 4,mCEPP,Level 2,w-COOH
+BEBP,Level 4,mCPP,Level 2,w-ab
+BMPP,Level 4,mMPP,ND,mono
+BMPP,Level 4,mHMPP,ND,w-1-OH
+BMPP,Level 4,mOMPP,ND,w-1-oxo
+BMP,ND,mHBP,Level 2,w-1-OH
+BMP,ND,m2HBP,Level 2,mOH
+BMP,ND,mCPP,Level 2,w-ab
+BEP,Level 4,mHBP,Level 2,w-1-OH
+BEP,Level 4,m2HBP,Level 2,mOH
+BEP,Level 4,mCPP,Level 2,w-ab
+DiBP,Level 1,m3HIBP,ND,w-OH
+DiBP,Level 1,mHIBP,Level 2,w-1-OH
+DBP,Level 1,mHBP,Level 2,w-1-OH
+DBP,Level 1,m2HBP,Level 2,mOH
+DBP,Level 1,mCPP,Level 2,w-ab
+CiBP,ND,m3HIBP,ND,w-OH
+CiBP,ND,mHIBP,Level 2,w-1-OH
+BuEBP,ND,mHBP,Level 2,w-1-OH
+BuEBP,ND,m2HBP,Level 2,mOH
+BuEBP,ND,mCPP,Level 2,w-ab
+BsBP,Level 2,mHBP,Level 2,w-1-OH
+BsBP,Level 2,m2HBP,Level 2,mOH
+BsBP,Level 2,mCPP,Level 2,w-ab
+BiBP,Level 2,mHBP,Level 2,w-1-OH
+BiBP,Level 2,m2HBP,Level 2,mOH
+BiBP,Level 2,mCPP,Level 2,w-ab
+BiBP,Level 2,m3HIBP,ND,w-OH
+BiBP,Level 2,mHIBP,Level 2,w-1-OH
+BBzP,ND,mHBP,Level 2,w-1-OH
+BBzP,ND,m2HBP,Level 2,mOH
+BBzP,ND,mCPP,Level 2,w-ab
+BCHP,ND,mHBP,Level 2,w-1-OH
+BCHP,ND,m2HBP,Level 2,mOH
+BCHP,ND,mCPP,Level 2,w-ab
+BMPP,Level 4,40CMP,ND,w-COOH
+BMPP,Level 4,mCPP,Level 2,w-ab
+MeOP,Level 2,mMP,Level 1,mono
+MeOP,Level 2,mOP,ND,mono
+MeOP,Level 2,mHOP,Level 2,w-1-OH
+MeOP,Level 2,mOOP,Level 2,w-1-oxo
+MeOP,Level 2,mCHpP,Level 2,w-COOH
+MeOP,Level 2,mCPP,Level 2,w-ab
+DiPP,ND,miPP,ND,mono
+DiPP,ND,m3HPP,Level 2,w-1-OH
+DiPP,ND,m4HPeP,Level 2,w-OH
+DiPP,ND,42CMP,ND,w-COOH
+DiPP,ND,mCPP,Level 2,w-ab
+BEHP,Level 4,mBP,Level 1,mono
+BEHP,Level 4,mHBP,Level 2,w-1-OH
+BEHP,Level 4,m2HBP,Level 2,mOH
+BEHP,Level 4,mEHP,Level 1,mono
+BEHP,Level 4,mEHHP,Level 1,w-1-OH
+BEHP,Level 4,mEOHP,Level 1,w-1-oxo
+BEHP,Level 4,mECPP,Level 2,w-COOH
+BEHP,Level 4,mCMHP,Level 2,w-COOH-br
+BEHP,Level 4,mCPP,Level 2,w-ab
+BMePP,Level 4,mMePP,ND,mono
+BMePP,Level 4,mHMePP,ND,w-1-OH
+BMePP,Level 4,mOMePP,ND,w-1-oxo
+BMePP,Level 4,44CMP,ND,w-COOH
+BMePP,Level 4,mCPP,Level 2,w-ab
+BEBuP,Level 4,mEBuP,ND,mono
+BEBuP,Level 4,mHEBuP,ND,w-1-OH
+BEBuP,Level 4,mOEBuP,ND,w-1-oxo
+BEBuP,Level 4,45CMP,ND,w-COOH
+BEBuP,Level 4,mCPP,Level 2,w-ab
+BHP,ND,mBP,Level 1,mono
+BHP,ND,m2HBP,Level 2,mOH
+BHP,ND,mHBP,Level 2,w-1-OH
+BHP,ND,mHP,ND,mono
+BHP,ND,mHHP,ND,w-1-OH
+BHP,ND,mOHP,Level 4,w-1-oxo
+BHP,ND,m5CPP,ND,w-COOH
+BHP,ND,mCPP,Level 2,w-ab
+DPP,ND,mPP,Level 2,mono
+DPP,ND,m4HPP,Level 2,w-1-OH
+DPP,ND,m4OPP,ND,w-1-oxo
+DPP,ND,mCBP,Level 4,w-COOH
+DPP,ND,mCPP,Level 2,w-ab
+DHeP,ND,mHexP,ND,mono
+B2MePP,Level 4,m2MePP,ND,mono
+B2MePP,Level 4,mH2MePP,ND,w-1-OH
+B2MePP,Level 4,mO2MePP,ND,w-1-oxo
+B2MePP,Level 4,49CMP,ND,w-COOH
+B2MePP,Level 4,mCPP,Level 2,w-ab
+DiHP,ND,miHP,ND,mono
+DiHP,ND,miHHP,ND,w-1-OH
+DiHP,ND,50CMP,ND,w-COOH
+B3MePP,ND,m3MePP,ND,mono
+B3MePP,ND,mH3MePP,ND,w-1-OH
+B3MePP,ND,mO3MePP,ND,w-1-oxo
+B3MePP,ND,51CMP,ND,w-COOH
+B3MePP,ND,mCPP,Level 2,w-ab
+HEHP,Level 4,mHP,ND,mono
+HEHP,Level 4,mHHP,ND,w-1-OH
+HEHP,Level 4,mOHP,Level 4,w-1-oxo
+HEHP,Level 4,m5CPP,ND,w-COOH
+HEHP,Level 4,mCPP,Level 2,w-ab
+HEHP,Level 4,mEHP,Level 1,mono
+HEHP,Level 4,mEHHP,Level 1,w-1-OH
+HEHP,Level 4,mEOHP,Level 1,w-1-oxo
+HEHP,Level 4,mECPP,Level 2,w-COOH
+HEHP,Level 4,mCMHP,Level 2,w-COOH-br
+BuMHP,Level 4,mBP,Level 1,mono
+BuMHP,Level 4,m2HBP,Level 2,mOH
+BuMHP,Level 4,mHBP,Level 2,w-1-OH
+BuMHP,Level 4,mHMHP,ND,w-1-OH
+BuMHP,Level 4,mOMHP,ND,w-1-oxo
+BuMHP,Level 4,66CMP,ND,w-COOH
+BuMHP,Level 4,mCPP,Level 2,w-ab
+BPhPP,ND,mPhPP,ND,mono
+BOP,Level 4,mBP,Level 1,mono
+BOP,Level 4,m2HBP,Level 2,mOH
+BOP,Level 4,mHBP,Level 2,w-1-OH
+BOP,Level 4,mOP,ND,mono
+BOP,Level 4,mHOP,Level 2,w-1-OH
+BOP,Level 4,mOOP,Level 2,w-1-oxo
+BOP,Level 4,mCHpP,Level 2,w-COOH
+BOP,Level 4,mCPP,Level 2,w-ab
+DHP,ND,mHP,ND,mono
+DHP,ND,mHHP,ND,w-1-OH
+DHP,ND,mOHP,Level 4,w-1-oxo
+DHP,ND,m5CPP,ND,w-COOH
+DHP,ND,mCPP,Level 2,w-ab
+DEMPP,ND,mEMPP,ND,mono
+DEMPP,ND,mHEMPP,ND,w-1-OH
+DEMPP,ND,mOEMPP,ND,w-1-oxo
+DEMPP,ND,57CMP,ND,w-COOH
+DEMPP,ND,mCPP,Level 2,w-ab
+BeOP,ND,mBzP,ND,mono
+BeOP,ND,mOP,ND,mono
+BeOP,ND,mHOP,Level 2,w-1-OH
+BeOP,ND,mOOP,Level 2,w-1-oxo
+BeOP,ND,mCHpP,Level 2,w-COOH
+BeOP,ND,mCPP,Level 2,w-ab
+CiOP,Level 4,mCHP,ND,mono
+CiOP,Level 4,miOP,ND,mono
+CiOP,Level 4,mHiOP,ND,w-1-OH
+CiOP,Level 4,71CMP,ND,w-COOH
+CiOP,Level 4,mCPP,Level 2,w-ab
+BNP,ND,mBP,Level 1,mono
+BNP,ND,m2HBP,Level 2,mOH
+BNP,ND,mHBP,Level 2,w-1-OH
+BNP,ND,mNP,Level 2,mono
+BNP,ND,mHNP,ND,w-1-OH
+BNP,ND,mONP,ND,w-1-oxo
+BNP,ND,m8COP,ND,w-COOH
+BNP,ND,mCPP,Level 2,w-ab
+DiHpP,Level 4,miHpP,ND,mono
+DiHpP,Level 4,mHiHpP,ND,w-1-OH
+DiHpP,Level 4,61CMP,ND,w-COOH
+DiHpP,Level 4,mCPP,Level 2,w-ab
+DPrPP,Level 2,mPrPP,ND,mono
+DPrPP,Level 2,mHPrPP,ND,w-1-OH
+DPrPP,Level 2,mOPrPP,ND,w-1-oxo
+DPrPP,Level 2,62CMP,ND,w-COOH
+DPrPP,Level 2,mCPP,Level 2,w-ab
+DEHP,Level 1,mEHP,Level 1,mono
+DEHP,Level 1,mEHHP,Level 1,w-1-OH
+DEHP,Level 1,mEOHP,Level 1,w-1-oxo
+DEHP,Level 1,mECPP,Level 2,w-COOH
+DEHP,Level 1,mCMHP,Level 2,w-COOH-br
+DEHP,Level 1,mCPP,Level 2,w-ab
+BMNP,Level 4,mBP,Level 1,mono
+BMNP,Level 4,m2HBP,Level 2,mOH
+BMNP,Level 4,mHBP,Level 2,w-1-OH
+BMNP,Level 4,miDP,ND,mono
+BMNP,Level 4,mHiDP,ND,w-1-OH
+BMNP,Level 4,mCiNP,Level 3,w-COOH
+BMNP,Level 4,mCPP,Level 2,w-ab
+HiOP,Level 4,mHP,ND,mono
+HiOP,Level 4,mHHP,ND,w-1-OH
+HiOP,Level 4,mOHP,Level 4,w-1-oxo
+HiOP,Level 4,m5CPP,ND,w-COOH
+HiOP,Level 4,mCPP,Level 2,w-ab
+HiOP,Level 4,miOP,ND,mono
+HiOP,Level 4,mHiOP,ND,w-1-OH
+HiOP,Level 4,71CMP,ND,w-COOH
+DHpP,ND,mHpP,ND,mono
+BMHP,Level 2,mMHP,ND,mono
+BMHP,Level 2,mHMHP,ND,w-1-OH
+BMHP,Level 2,mOMHP,ND,w-1-oxo
+BMHP,Level 2,66CMP,ND,w-COOH
+BMHP,Level 2,mCPP,Level 2,w-ab
+MNPMP,ND,miDP,ND,mono
+MNPMP,ND,mHiDP,ND,w-1-OH
+MNPMP,ND,mCiNP,Level 3,w-COOH
+MNPMP,ND,mCPP,Level 2,w-ab
+MNPMP,ND,mBzP,ND,mono
+BDP,ND,mBP,Level 1,mono
+BDP,ND,m2HBP,Level 2,mOH
+BDP,ND,mHBP,Level 2,w-1-OH
+BDP,ND,mDP,ND,mono
+BDP,ND,m9PHHP,ND,w-1-OH
+BDP,ND,mPHHP,ND,mOH
+BDP,ND,m1POHP,ND,moxo
+BDP,ND,mCNP,Level 3,w-COOH
+BDP,ND,mCPP,Level 2,w-ab
+BDP,ND,m9POHP,ND,w-1-oxo
+NPP,ND,mNP,Level 2,mono
+NPP,ND,mHNP,ND,w-1-OH
+NPP,ND,mONP,ND,w-1-oxo
+NPP,ND,m8COP,ND,w-COOH
+NPP,ND,mCPP,Level 2,w-ab
+NPP,ND,mPP,Level 2,mono
+NPP,ND,m4HPP,Level 2,w-1-OH
+NPP,ND,m4OPP,ND,w-1-oxo
+NPP,ND,mCBP,Level 4,w-COOH
+DHpP,ND,mHHpP,ND,w-1-OH
+DHpP,ND,mOHpP,Level 2,w-1-oxo
+DHpP,ND,mCHxP,Level 2,w-COOH
+DHpP,ND,mCPP,Level 2,w-ab
+DiOP,ND,miOP,ND,mono
+DiOP,ND,mHiOP,ND,w-1-OH
+DiOP,ND,71CMP,ND,w-COOH
+DiOP,ND,mCPP,Level 2,w-ab
+EHiDP,ND,mEHP,Level 1,mono
+EHiDP,ND,mEHHP,Level 1,w-1-OH
+EHiDP,ND,mEOHP,Level 1,w-1-oxo
+EHiDP,ND,mECPP,Level 2,w-COOH
+EHiDP,ND,mCMHP,Level 2,w-COOH-br
+EHiDP,ND,mCPP,Level 2,w-ab
+EHiDP,ND,mHiDP,ND,w-1-OH
+EHiDP,ND,miDP,ND,mono
+EHiDP,ND,mCiNP,Level 3,w-COOH
+HiDP,ND,mHP,ND,mono
+HiDP,ND,mHHP,ND,w-1-OH
+HiDP,ND,mOHP,Level 4,w-1-oxo
+HiDP,ND,m5CPP,ND,w-COOH
+HiDP,ND,mCPP,Level 2,w-ab
+HiDP,ND,miDP,ND,mono
+HiDP,ND,mHiDP,ND,w-1-OH
+HiDP,ND,mCiNP,Level 3,w-COOH
+iNiOP,Level 2,miNP,ND,mono
+iNiOP,Level 2,mHiNP,ND,w-1-OH
+DPrHP,Level 2,mHPrHP,ND,w-1-OH
+iNiOP,Level 2,mCiOP,Level 3,w-COOH
+iNiOP,Level 2,mCPP,Level 2,w-ab
+iNiOP,Level 2,miOP,ND,mono
+iNiOP,Level 2,mHiOP,ND,w-1-OH
+iNiOP,Level 2,71CMP,ND,w-COOH
+HNP,ND,mHpP,ND,mono
+HNP,ND,mHHpP,ND,w-1-OH
+HNP,ND,mOHpP,Level 2,w-1-oxo
+HNP,ND,mCHxP,Level 2,w-COOH
+HNP,ND,mCPP,Level 2,w-ab
+HNP,ND,mNP,Level 2,mono
+HNP,ND,mHNP,ND,w-1-OH
+HNP,ND,mONP,ND,w-1-oxo
+HNP,ND,m8COP,ND,w-COOH
+DOP,Level 1,mOP,ND,mono
+DOP,Level 1,mHOP,Level 2,w-1-OH
+DOP,Level 1,mOOP,Level 2,w-1-oxo
+DOP,Level 1,mCHpP,Level 2,w-COOH
+DOP,Level 1,mCPP,Level 2,w-ab
+HDP,ND,mHP,ND,mono
+HDP,ND,mHHP,ND,w-1-OH
+HDP,ND,mOHP,Level 4,w-1-oxo
+HDP,ND,m5CPP,ND,w-COOH
+HDP,ND,mCPP,Level 2,w-ab
+HDP,ND,mDP,ND,mono
+HDP,ND,m9PHHP,ND,w-1-OH
+HDP,ND,m9POHP,ND,w-1-oxo
+HDP,ND,mPHHP,ND,mOH
+HDP,ND,m1POHP,ND,moxo
+HDP,ND,mCNP,Level 3,w-COOH
+BCHPP,ND,mCHxPP,ND,mono
+iONP,Level 2,miOP,ND,mono
+iONP,Level 2,mHiOP,ND,w-1-OH
+iONP,Level 2,71CMP,ND,w-COOH
+iONP,Level 2,mCPP,Level 2,w-ab
+iONP,Level 2,mNP,Level 2,mono
+iONP,Level 2,mHNP,ND,w-1-OH
+iONP,Level 2,mONP,ND,w-1-oxo
+iONP,Level 2,m8COP,ND,w-COOH
+iDiOP,ND,miDP,ND,mono
+iDiOP,ND,mHiDP,ND,w-1-OH
+iDiOP,ND,mCiNP,Level 3,w-COOH
+iDiOP,ND,mCPP,Level 2,w-ab
+iDiOP,ND,miOP,ND,mono
+iDiOP,ND,mHiOP,ND,w-1-OH
+iDiOP,ND,71CMP,ND,w-COOH
+BMOP,Level 2,mMOP,ND,mono
+BMOP,Level 2,mHMOP,ND,w-1-OH
+BMOP,Level 2,mOMOP,ND,w-1-oxo
+BMOP,Level 2,81CMP,ND,w-COOH
+BMOP,Level 2,mCPP,Level 2,w-ab
+B4MOP,Level 2,m4MOP,ND,mono
+B4MOP,Level 2,mH4MOP,ND,w-1-OH
+B4MOP,Level 2,mO4MOP,Level 2,w-1-oxo
+B4MOP,Level 2,mCMEHP,Level 3,w-COOH
+B4MOP,Level 2,mCPP,Level 2,w-ab
+DiNP,Level 1,miNP,ND,mono
+DiNP,Level 1,mHiNP,ND,mOH
+DPrHP,Level 2,mPrHP,ND,mono
+DiNP,Level 1,mCiOP,Level 3,w-COOH
+DiNP,Level 1,mCPP,Level 2,w-ab
+DPrHP,Level 2,mPOHP,ND,w-1-oxo
+DPrHP,Level 2,mPCHP,Level 3,w-COOH
+DPrHP,Level 2,mCPP,Level 2,w-ab
+iDOP,ND,miDP,ND,mono
+iDOP,ND,mHiDP,ND,w-1-OH
+iDOP,ND,mCiNP,Level 3,w-COOH
+iDOP,ND,mCPP,Level 2,w-ab
+iDOP,ND,mOP,ND,mono
+iDOP,ND,mHOP,Level 2,w-1-OH
+iDOP,ND,mOOP,Level 2,w-1-oxo
+iDOP,ND,mCHpP,Level 2,w-COOH
+DeiOP,ND,mDP,ND,mono
+DeiOP,ND,m9PHHP,ND,w-1-OH
+DeiOP,ND,m9POHP,ND,w-1-oxo
+DeiOP,ND,mPHHP,ND,mOH
+DeiOP,ND,m1POHP,ND,moxo
+DeiOP,ND,mCNP,Level 3,w-COOH
+DeiOP,ND,mCPP,Level 2,w-ab
+DeiOP,ND,miOP,ND,mono
+DeiOP,ND,mHiOP,ND,w-1-OH
+DeiOP,ND,71CMP,ND,w-COOH
+iNNP,Level 2,miNP,ND,mono
+iNNP,Level 2,mHiNP,ND,w-1-OH
+iNNP,Level 2,mCiOP,Level 3,w-COOH
+iNNP,Level 2,mCPP,Level 2,w-ab
+iNNP,Level 2,mNP,Level 2,mono
+iNNP,Level 2,mHNP,ND,w-1-OH
+iNNP,Level 2,mONP,ND,w-1-oxo
+iNNP,Level 2,m8COP,ND,w-COOH
+ODP,ND,mOP,ND,mono
+ODP,ND,mHOP,Level 2,w-1-OH
+ODP,ND,mOOP,Level 2,w-1-oxo
+ODP,ND,mCHpP,Level 2,w-COOH
+ODP,ND,mCPP,Level 2,w-ab
+ODP,ND,mDP,ND,mono
+ODP,ND,m9PHHP,ND,w-1-OH
+ODP,ND,m9POHP,ND,w-1-oxo
+ODP,ND,mPHHP,ND,mOH
+ODP,ND,m1POHP,ND,moxo
+ODP,ND,mCNP,Level 3,w-COOH
+HUP,ND,mHpP,ND,mono
+HUP,ND,mHHpP,ND,w-1-OH
+HUP,ND,mOHpP,Level 2,w-1-oxo
+HUP,ND,mCHxP,Level 2,w-COOH
+HUP,ND,mCPP,Level 2,w-ab
+HUP,ND,mUP,ND,mono
+HUP,ND,mHUP,Level 4,w-1-OH
+HUP,ND,mOUP,ND,w-1-oxo
+HUP,ND,mCDP,Level 2,w-COOH
+DNP,Level 1,mNP,Level 2,mono
+DNP,Level 1,mHNP,ND,w-1-OH
+DNP,Level 1,mONP,ND,w-1-oxo
+DNP,Level 1,m8COP,ND,w-COOH
+DNP,Level 1,mCPP,Level 2,w-ab
+iDiNP,Level 2,miDP,ND,mono
+iDiNP,Level 2,mHiDP,ND,w-1-OH
+iDiNP,Level 2,mCiNP,Level 3,w-COOH
+iDiNP,Level 2,mCPP,Level 2,w-ab
+iDiNP,Level 2,miNP,ND,mono
+iDiNP,Level 2,mHiNP,ND,w-1-OH
+iDiNP,Level 2,mCiOP,Level 3,w-COOH
+iOiUP,Level 3,miOP,ND,mono
+iOiUP,Level 3,mHiOP,ND,w-1-OH
+iOiUP,Level 3,71CMP,ND,w-COOH
+iOiUP,Level 3,mCPP,Level 2,w-ab
+iOiUP,Level 3,miUP,ND,mono
+iOiUP,Level 3,mHiUP,ND,w-1-OH
+iOiUP,Level 3,109CMP,ND,w-COOH
+DDcP,ND,mDcP,ND,mono
+iOUP,Level 3,miOP,ND,mono
+iOUP,Level 3,mHiOP,ND,w-1-OH
+iOUP,Level 3,71CMP,ND,w-COOH
+iOUP,Level 3,mUP,ND,mono
+iOUP,Level 3,mHUP,Level 4,w-1-OH
+iOUP,Level 3,mOUP,ND,w-1-oxo
+iOUP,Level 3,mCDP,Level 2,w-COOH
+iOUP,Level 3,mCPP,Level 2,w-ab
+DeiNP,Level 2,mDP,ND,mono
+DeiNP,Level 2,m9PHHP,ND,w-1-OH
+DeiNP,Level 2,m9POHP,ND,w-1-oxo
+DeiNP,Level 2,mPHHP,ND,mOH
+DeiNP,Level 2,m1POHP,ND,moxo
+DeiNP,Level 2,mCNP,Level 3,w-COOH
+DeiNP,Level 2,mCPP,Level 2,w-ab
+DeiNP,Level 2,miUP,ND,mono
+DeiNP,Level 2,mHiUP,ND,w-1-OH
+DeiNP,Level 2,109CMP,ND,w-COOH
+HiTP,ND,mHP,ND,mono
+HiTP,ND,mHHP,ND,w-1-OH
+HiTP,ND,mOHP,Level 4,w-1-oxo
+HiTP,ND,m5CPP,ND,w-COOH
+HiTP,ND,mCPP,Level 2,w-ab
+HiTP,ND,miTP,ND,mono
+HiTP,ND,mHiTP,ND,w-1-OH
+HiTP,ND,121CMP,ND,w-COOH
+iDNP,Level 3,miDP,ND,mono
+iDNP,Level 3,mHiDP,ND,w-1-OH
+iDNP,Level 3,mCiNP,Level 3,w-COOH
+iDNP,Level 3,mCPP,Level 2,w-ab
+iDNP,Level 3,mNP,Level 2,mono
+iDNP,Level 3,mHNP,ND,w-1-OH
+iDNP,Level 3,mONP,ND,w-1-oxo
+iDNP,Level 3,m8COP,ND,w-COOH
+iNiUP,Level 3,miNP,ND,mono
+iNiUP,Level 3,mHiNP,ND,w-1-OH
+iNiUP,Level 3,mCiOP,Level 3,w-COOH
+iNiUP,Level 3,mCPP,Level 2,w-ab
+iNiUP,Level 3,miUP,ND,mono
+iNiUP,Level 3,mHiUP,ND,w-1-OH
+iNiUP,Level 3,109CMP,ND,w-COOH
+DiDP,Level 2,miDP,ND,mono
+DiDP,Level 2,mHiDP,ND,w-1-OH
+DiDP,Level 2,mCiNP,Level 3,w-COOH
+DiDP,Level 2,mCPP,Level 2,w-ab
+DeNP,Level 3,mDP,ND,mono
+DeNP,Level 3,m9PHHP,ND,w-1-OH
+DeNP,Level 3,m9POHP,ND,w-1-oxo
+DeNP,Level 3,mPHHP,ND,mOH
+DeNP,Level 3,m1POHP,ND,moxo
+DeNP,Level 3,mCNP,Level 3,w-COOH
+DeNP,Level 3,mCPP,Level 2,w-ab
+DeNP,Level 3,mNP,Level 2,mono
+DeNP,Level 3,mHNP,ND,w-1-OH
+DeNP,Level 3,mONP,ND,w-1-oxo
+DeNP,Level 3,m8COP,ND,w-COOH
+iNUP,Level 3,miNP,ND,mono
+iNUP,Level 3,mHiNP,ND,w-1-OH
+iNUP,Level 3,mCiOP,Level 3,w-COOH
+iNUP,Level 3,mCPP,Level 2,w-ab
+iNUP,Level 3,mUP,ND,mono
+iNUP,Level 3,mHUP,Level 4,w-1-OH
+iNUP,Level 3,mOUP,ND,w-1-oxo
+iNUP,Level 3,mCDP,Level 2,w-COOH
+iUNP,Level 3,miUP,ND,mono
+iUNP,Level 3,mHiUP,ND,w-1-OH
+iUNP,Level 3,109CMP,ND,w-COOH
+iUNP,Level 3,mCPP,Level 2,w-ab
+iUNP,Level 3,mNP,Level 2,mono
+iUNP,Level 3,mHNP,ND,w-1-OH
+iUNP,Level 3,mONP,ND,w-1-oxo
+iUNP,Level 3,m8COP,ND,w-COOH
+NUP,Level 3,mNP,Level 2,mono
+NUP,Level 3,mHNP,ND,w-1-OH
+NUP,Level 3,mONP,ND,w-1-oxo
+NUP,Level 3,m8COP,ND,w-COOH
+NUP,Level 3,mCPP,Level 2,w-ab
+NUP,Level 3,mUP,ND,mono
+NUP,Level 3,mHUP,Level 4,w-1-OH
+NUP,Level 3,mOUP,ND,w-1-oxo
+NUP,Level 3,mCDP,Level 2,w-COOH
+DDP,Level 2,mDP,ND,mono
+DDP,Level 2,m9PHHP,ND,w-1-OH
+DDP,Level 2,m9POHP,ND,w-1-oxo
+DDP,Level 2,mPHHP,ND,mOH
+DDP,Level 2,m1POHP,ND,moxo
+DDP,Level 2,mCNP,Level 3,w-COOH
+DDP,Level 2,mCPP,Level 2,w-ab
+DeiUP,Level 2,mDP,ND,mono
+DeiUP,Level 2,m9PHHP,ND,w-1-OH
+DeiUP,Level 2,m9POHP,ND,w-1-oxo
+DeiUP,Level 2,mPHHP,ND,mOH
+DeiUP,Level 2,m1POHP,ND,moxo
+DeiUP,Level 2,mCNP,Level 3,w-COOH
+DeiUP,Level 2,mCPP,Level 2,w-ab
+DeiUP,Level 2,miUP,ND,mono
+DeiUP,Level 2,mHiUP,ND,w-1-OH
+DeiUP,Level 2,109CMP,ND,w-COOH
+iDUP,Level 2,miDP,ND,mono
+iDUP,Level 2,mHiDP,ND,w-1-OH
+iDUP,Level 2,mCiNP,Level 3,w-COOH
+iDUP,Level 2,mCPP,Level 2,w-ab
+iDUP,Level 2,mUP,ND,mono
+iDUP,Level 2,mHUP,Level 4,w-1-OH
+iDUP,Level 2,mOUP,ND,w-1-oxo
+iDUP,Level 2,mCDP,Level 2,w-COOH
+NTP,ND,mNP,Level 2,mono
+NTP,ND,mHNP,ND,w-1-OH
+NTP,ND,mONP,ND,w-1-oxo
+NTP,ND,m8COP,ND,w-COOH
+NTP,ND,mCPP,Level 2,w-ab
+NTP,ND,mTDP,ND,mono
+NTP,ND,mHTDP,ND,w-1-OH
+NTP,ND,mOTDP,ND,w-1-oxo
+NTP,ND,107CMP,ND,w-COOH
+iNiTP,Level 4,miNP,ND,mono
+iNiTP,Level 4,mHiNP,ND,w-1-OH
+iNiTP,Level 4,mCiOP,Level 3,w-COOH
+iNiTP,Level 4,mCPP,Level 2,w-ab
+iNiTP,Level 4,miTP,ND,mono
+iNiTP,Level 4,mHiTP,ND,w-1-OH
+iNiTP,Level 4,121CMP,ND,w-COOH
+DiUP,Level 2,miUP,ND,mono
+DiUP,Level 2,mHiUP,ND,w-1-OH
+DiUP,Level 2,109CMP,ND,w-COOH
+DiUP,Level 2,mCPP,Level 2,w-ab
+DeUP,Level 2,mDP,ND,mono
+DeUP,Level 2,m9PHHP,ND,w-1-OH
+DeUP,Level 2,m9POHP,ND,w-1-oxo
+DeUP,Level 2,mPHHP,ND,mOH
+DeUP,Level 2,m1POHP,ND,moxo
+DeUP,Level 2,mCNP,Level 3,w-COOH
+DeUP,Level 2,mCPP,Level 2,w-ab
+DeUP,Level 2,mUP,ND,mono
+DeUP,Level 2,mHUP,Level 4,w-1-OH
+DeUP,Level 2,mOUP,ND,w-1-oxo
+DeUP,Level 2,mCDP,Level 2,w-COOH
+BTNP,ND,mTNP,ND,mono
+BTNP,ND,mHTNP,ND,w-1-OH
+BTNP,ND,111CMP,ND,w-COOH
+BTNP,ND,mCPP,Level 2,w-ab
+iUUP,Level 2,miUP,ND,mono
+iUUP,Level 2,mHiUP,ND,w-1-OH
+iUUP,Level 2,109CMP,ND,w-COOH
+iUUP,Level 2,mCPP,Level 2,w-ab
+iUUP,Level 2,mUP,ND,mono
+iUUP,Level 2,mHUP,Level 4,w-1-OH
+iUUP,Level 2,mOUP,ND,w-1-oxo
+iUUP,Level 2,mCDP,Level 2,w-ab
+iTNP,Level 4,miTP,ND,mono
+iTNP,Level 4,mHiTP,ND,w-1-OH
+iTNP,Level 4,121CMP,ND,w-COOH
+iTNP,Level 4,mCPP,Level 2,w-ab
+iTNP,Level 4,mNP,Level 2,mono
+iTNP,Level 4,mHNP,ND,w-1-OH
+iTNP,Level 4,mONP,ND,w-1-oxo
+iTNP,Level 4,m8COP,ND,w-COOH
+DUP,Level 2,mUP,ND,mono
+DUP,Level 2,mHUP,Level 4,w-1-OH
+DUP,Level 2,mOUP,ND,w-1-oxo
+DUP,Level 2,mCDP,Level 2,w-COOH
+DUP,Level 2,mCPP,Level 2,w-ab
+iDiTP,ND,miDP,ND,mono
+iDiTP,ND,mHiDP,ND,w-1-OH
+iDiTP,ND,mCiNP,Level 3,w-COOH
+iDiTP,ND,mCPP,Level 2,w-ab
+iDiTP,ND,miTP,ND,mono
+iDiTP,ND,mHiTP,ND,w-1-OH
+iDiTP,ND,121CMP,ND,w-COOH
+iDTP,ND,miDP,ND,mono
+iDTP,ND,mHiDP,ND,w-1-OH
+iDTP,ND,mCiNP,Level 3,w-COOH
+iDTP,ND,mCPP,Level 2,w-ab
+iDTP,ND,mTP,ND,mono
+iDTP,ND,mHTP,Level 4,w-1-OH
+iDTP,ND,mOTP,Level 2,w-1-oxo
+iDTP,ND,122CMP,ND,w-COOH
+DeiTP,ND,mDP,ND,mono
+DeiTP,ND,m9PHHP,ND,w-1-OH
+DeiTP,ND,m9POHP,ND,w-1-oxo
+DeiTP,ND,mPHHP,ND,mOH
+DeiTP,ND,m1POHP,ND,moxo
+DeiTP,ND,mCNP,Level 3,w-COOH
+DeiTP,ND,mCPP,Level 2,w-ab
+DeiTP,ND,miTP,ND,mono
+DeiTP,ND,mHiTP,ND,w-1-OH
+DeiTP,ND,121CMP,ND,w-COOH
+iTiUP,Level 4,miTP,ND,mono
+iTiUP,Level 4,mHiTP,ND,w-1-OH
+iTiUP,Level 4,121CMP,ND,w-COOH
+iTiUP,Level 4,mCPP,Level 2,w-ab
+iTiUP,Level 4,miUP,ND,mono
+iTiUP,Level 4,mHiUP,ND,w-1-OH
+iTiUP,Level 4,109CMP,ND,w-COOH
+iTUP,Level 4,miTP,ND,mono
+iTUP,Level 4,mHiTP,ND,w-1-OH
+iTUP,Level 4,121CMP,ND,w-COOH
+iTUP,Level 4,mCPP,Level 2,w-ab
+iTUP,Level 4,mUP,ND,mono
+iTUP,Level 4,mHUP,Level 4,w-1-OH
+iTUP,Level 4,mOUP,ND,w-1-oxo
+iTUP,Level 4,mCDP,Level 2,w-COOH
+DDdP,Level 3,mDdP,ND,mono
+DDdP,Level 3,mHDdP,ND,w-1-OH
+DDdP,Level 3,mODdP,ND,w-1-oxo
+DDdP,Level 3,120CMP,ND,w-COOH
+DDdP,Level 3,mCPP,Level 2,w-ab
+DiTP,ND,miTP,ND,mono
+DiTP,ND,mHiTP,ND,w-1-OH
+DiTP,ND,121CMP,ND,w-COOH
+DiTP,ND,mCPP,Level 2,w-ab
+DTP,ND,mTP,ND,mono
+DTP,ND,mHTP,Level 4,w-1-OH
+DTP,ND,mOTP,Level 2,w-1-oxo
+DTP,ND,122CMP,ND,w-COOH
+DTP,ND,mCPP,Level 2,w-ab
+DOcP,ND,mOcP,ND,mono
+DOcP,ND,mHOcP,ND,w-1-OH
+DOcP,ND,mOOcP,ND,w-1-oxo
+DOcP,ND,123CMP,ND,w-COOH
+DOcP,ND,mCPP,Level 2,w-ab
+DEEP,ND,mDeGP,Level 2,w-OH
